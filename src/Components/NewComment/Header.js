@@ -3,7 +3,7 @@ import React from 'react'
 
 const Header = ({navigaton}) => {
   return (
-    <View style = {styles.headerContainer} >
+    <View style = {styles.container} >
       <View>
         <TouchableOpacity onPress={() => navigaton.goBack()}>
           <Image style= {styles.headerIcon}
@@ -19,20 +19,20 @@ const Header = ({navigaton}) => {
            <Text style= {styles.headerText}>Comment</Text>
         </TouchableOpacity>
       </View>
-    </View>
-    
+  </View>
+
   )
 }
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const styles = StyleSheet.create({
-    headerContainer: {
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexDirection: 'row',
-        marginHorizontal: 20,
-        marginBottom: 20,
-        //backgroundColor:'blue'
+    container:{
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      flexDirection: 'row',
+      //backgroundColor:'blue',
+      marginHorizontal: 20,
+      height: 35
     },
     headerText: {
         fontSize: 16, 

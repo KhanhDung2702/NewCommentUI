@@ -34,10 +34,9 @@ const mediaChoosingHandle = async () => {
 const Media = () => {
   return (
     <View style= {styles.container}>
-      <View style = {styles.mediaArea}>
         <TouchableOpacity style={styles.choiceButton}
           onPress={() => cameraTakingHandle()}>
-            <View style = {styles.mediaContainer}>
+            <View style = {styles.buttonContainer}>
               <Image
                 style = {styles.mediaButton}
                   source={{
@@ -49,7 +48,7 @@ const Media = () => {
         
         <TouchableOpacity style={styles.choiceButton}
           onPress={() => mediaChoosingHandle()}>
-            <View style = {styles.mediaContainer}>
+            <View style = {styles.buttonContainer}>
               <Image
                 style = {styles.mediaButton}
                   source={{
@@ -58,26 +57,19 @@ const Media = () => {
                   />
             </View>
         </TouchableOpacity>
-      </View>
+      
     </View>
   )
 }
-const SCREEN_HEIGHT = Dimensions.get('window').height;
-const SCREEN_WIDTH = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     container:{
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        marginBottom: 20
-        //height: '17.9%' ,
+        height: 80,
         //backgroundColor: 'black',
+        alignItems:'center',
+        flexDirection: 'row',
         
     },
-    mediaArea:{
-        alignItems:'center',
-        flexDirection: 'row'
-    },
-    mediaContainer:{
+    buttonContainer:{
         alignItems:'center',
         justifyContent: 'center',
         marginHorizontal: 10,

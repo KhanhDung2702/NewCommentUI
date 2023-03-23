@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from '../../Screen/Home'
 import NewComment from '../../Screen/NewComment'
+import BottomTabs from './BottomTabs'
 
 
 //yarn add @react-navigation/stack

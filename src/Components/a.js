@@ -35,7 +35,7 @@ const BottomTabs = () => {
 
 const styles = StyleSheet.create({
   container:{
-    //backgroundColor: 'red',
+    backgroundColor: 'red',
     height: 45
   },
 
