@@ -1,4 +1,4 @@
-import { SafeAreaView} from 'react-native'
+import { SafeAreaView, StyleSheet, StatusBar} from 'react-native'
 import React from 'react'
 
 import Media from '../Components/NewComment/Media'
@@ -9,10 +9,9 @@ import Header from '../Components/NewComment/Header'
 //yarn add react-native-elements
 //npx expo install expo-image-picker
 
-
 const NewComment = ( {navigation} ) => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.AndroidSafeArea}>
         <Header navigaton={navigation}/>
         <TypeComment/>
         <Media/>
@@ -21,4 +20,11 @@ const NewComment = ( {navigation} ) => {
     
   )
 }
+
+const styles = StyleSheet.create({
+  AndroidSafeArea: {
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+  }
+});
+
 export default NewComment
